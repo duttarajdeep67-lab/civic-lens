@@ -1,8 +1,13 @@
-# CivicLens — AI-Powered Civic Issue Reporting and Resolution Platform
+<div align="center">
+  <img src="logo.jpg" alt="CivicLens Logo" width="240" />
+  <h1>CivicLens</h1>
+  <p><strong>AI-Powered Civic Issue Reporting and Resolution Platform</strong></p>
+  <p><em>"See It. Report It. Resolve It."</em></p>
 
-[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/duttarajdeep67-lab/civic-lens)
+  [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/duttarajdeep67-lab/civic-lens)
+</div>
 
-> **"See It. Report It. Resolve It."**
+---
 
 CivicLens is a full-stack, enterprise-grade civic governance platform that empowers citizens to report public infrastructure and maintenance problems with a single photograph. Rather than burdening citizens with manual forms and bureaucracy, CivicLens integrates multimodal **Google Gemini Vision AI** to automatically inspect uploaded photos, identify visible defects, draft professional complaints, determine issue severity, and route reports directly to the responsible municipal departments.
 
