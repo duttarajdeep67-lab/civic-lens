@@ -19,8 +19,9 @@ services:
       - key: GEMINI_API_KEY
         sync: false
 
-  - type: static
+  - type: web
     name: civiclens-frontend
+    runtime: static
     region: oregon
     plan: free
     rootDir: frontend
