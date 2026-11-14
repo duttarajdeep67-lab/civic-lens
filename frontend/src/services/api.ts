@@ -11,8 +11,18 @@ import {
   DepartmentDashboardStats
 } from '../types';
 
+const API_BASE = import.meta.env.VITE_API_URL || '';
+
+export const getImageUrl = (url?: string | null): string => {
+  if (!url) return '';
+  if (url.startsWith('http://') || url.startsWith('https://') || url.startsWith('data:')) {
+    return url;
+  }
+  return `${API_BASE}${url}`;
+};
+
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: API_BASE ? `${API_BASE}/api` : '/api',
   headers: {
     'Content-Type': 'application/json',
   },

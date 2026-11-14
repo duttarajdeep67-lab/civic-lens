@@ -19,7 +19,7 @@ import {
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { toast } from 'sonner';
 
-import { complaintService, officerService } from '../services/api';
+import { complaintService, officerService, getImageUrl } from '../services/api';
 import { Complaint, ComplaintUpdate } from '../types';
 import { useAuth } from '../contexts/AuthContext';
 import { StatusBadge } from '../components/common/StatusBadge';
@@ -246,7 +246,7 @@ export const ComplaintDetailPage: React.FC = () => {
                 </span>
                 <div className="rounded-xl overflow-hidden bg-slate-950 max-h-72 flex items-center justify-center border border-slate-200">
                   <img
-                    src={complaint.image_url}
+                    src={getImageUrl(complaint.image_url)}
                     alt="Original Problem"
                     className="max-h-72 w-full object-cover"
                   />
@@ -262,7 +262,7 @@ export const ComplaintDetailPage: React.FC = () => {
                   </span>
                   <div className="rounded-xl overflow-hidden bg-slate-950 max-h-72 flex items-center justify-center border border-emerald-300">
                     <img
-                      src={complaint.updates.find(u => u.resolution_image_url)?.resolution_image_url}
+                      src={getImageUrl(complaint.updates.find(u => u.resolution_image_url)?.resolution_image_url)}
                       alt="Resolution Evidence"
                       className="max-h-72 w-full object-cover"
                     />

@@ -12,7 +12,7 @@ import {
   Layers,
   ArrowUpDown
 } from 'lucide-react';
-import { complaintService, referenceService } from '../services/api';
+import { complaintService, referenceService, getImageUrl } from '../services/api';
 import { Complaint, Category } from '../types';
 import { StatusBadge } from '../components/common/StatusBadge';
 import { PriorityBadge } from '../components/common/PriorityBadge';
@@ -178,7 +178,7 @@ export const MyComplaintsPage: React.FC = () => {
               {/* Photo Header */}
               <div className="h-44 bg-slate-900 relative overflow-hidden">
                 <img
-                  src={c.image_url}
+                  src={getImageUrl(c.image_url)}
                   alt={c.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
